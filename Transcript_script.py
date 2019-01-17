@@ -1,10 +1,14 @@
+#Transcript Code:
+    #The only parts needed to change for each use on a Transcript is the [FILE_NAME] and'gs://[BUCKET_NAME]/[AUDIO_FILE].wav'
 
+
+#Libraries to import. The speech_v1p1beta1 is the beta version that allows for punctuation. 
 import sys
 from google.cloud import speech
 from google.cloud import speech_v1p1beta1 as speech
 
 
-
+#Defining a function so that running this code on different files is easier. 
 def transcript(uri):
     client = speech.SpeechClient()
     operation = client.long_running_recognize(
@@ -24,6 +28,9 @@ def transcript(uri):
             print(alternative.transcript)  
 
 
-sys.stdout = open('lecture14las.txt','wt')
+            
+#Changeable Parts
+sys.stdout = open('[FILE_NAME].txt','wt') 
 
-transcript('gs://bit_ncsu_transcripts/Lecture 14 LAS.wav')
+transcript('gs://[BUCKET_NAME]/[AUDIO_FILE].wav')
+
