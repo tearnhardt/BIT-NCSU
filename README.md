@@ -11,17 +11,17 @@ Methods and code that harness the Google Cloud Speech-to-text API to produce aud
 ```
 gcloud iam service-accounts keys create [FILE_NAME].json --iam-account [NAME]@[PROJECT_ID].iamgserviceaccount.com
 ```
-   - *Where [NAME] is the username you chose for your account and [PROJECT_ID] is the ID of the project you're working on. [FILE_NAME] is any name you choose.  
+  - *Where [NAME] is the username you chose for your account and [PROJECT_ID] is the ID of the project you're working on. [FILE_NAME] is any name you choose.*  
 5. In the Console Terminal type:  
 ```
 gsutil cp '[FILE_NAME].json' 'gs://[BUCKET_NAME]'
 ```  
-   - *This is saving the .json file to the storage bucket you made earlier.  
+   - *This is saving the .json file to the storage bucket you made earlier.*
 6. Navigate to the Storage Bucket now and click on the .json file that should now be in it. This will open in a new webpage. SAve that document to a specific place on your computer. 
 
 ## Python
 1. If your computer does not have Python on it, download the latest version for your computer. 
-   - *Pay attention to where you save the program files because this will be importatn for the Virtual Environment portion.   
+   - *Pay attention to where you save the program files because this will be importatn for the Virtual Environment portion.*  
 2. Test the IDLE of the Python Version you downloaded to make sure it opens up.  
 
 ## Virtual Environment  
