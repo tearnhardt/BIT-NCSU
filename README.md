@@ -11,7 +11,7 @@ Methods and code that harness the Google Cloud Speech-to-text API to produce aud
 ```
 gcloud iam service-accounts keys create [FILE_NAME].json --iam-account [NAME]@[PROJECT_ID].iamgserviceaccount.com
 ```
-      - *Where [NAME] is the username you chose for your account and [PROJECT_ID] is the ID of the project you're working on. [FILE_NAME] is any name you choose.*  
+   -- *Where [NAME] is the username you chose for your account and [PROJECT_ID] is the ID of the project you're working on. [FILE_NAME] is any name you choose.*  
 5. In the Console Terminal type:  
 ```
 gsutil cp '[FILE_NAME].json' 'gs://[BUCKET_NAME]'
