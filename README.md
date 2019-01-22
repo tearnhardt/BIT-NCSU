@@ -17,7 +17,7 @@ gcloud iam service-accounts keys create [FILE_NAME].json --iam-account [NAME]@[P
 gsutil cp '[FILE_NAME].json' 'gs://[BUCKET_NAME]'
 ```  
    *This is saving the .json file to the storage bucket you made earlier.*  
-6. Navigate to the Storage Bucket now and click on the .json file that should now be in it. This will open in a new webpage. SAve that document to a specific place on your computer. 
+6. Navigate to the Storage Bucket now and click on the .json file that should now be in it. This will open in a new webpage. Save that document to a specific place on your computer. 
 
 ## Python
 1. If your computer does not have Python on it, download the latest version for your computer. 
@@ -45,7 +45,20 @@ Python -m virtualenv [NAME]
 
 ## Python Script  
 1. Copy the Python script from this repository and paste it into a Python script on your computer. Save that file in a memorable location under the name Transcript.py.  
-2. For each audio file you wish to transcribe you will have to change two portions of this Python script.  
+2. For each audio file you wish to transcribe you will have to change two lines of this Python script.  
 ```python
-sys.stdout = open('
+sys.stdout = open('[FILE_NAME].txt','wt') 
+
+transcript('gs://[BUCKET_NAME]/[AUDIO_FILE].wav')
+```  
+*By changing the first portion you choose what to name the actual text file containing the transcript. The second portion is directing where to find the file on the Google Cloud Storage.*  
+## Google Application Credentials  
+1. Locate the .json file saved earlier in the Google Cloud Section.  
+2. Open Command Prompt and type: 
+```
+set GOOGLE_APPLICATION_CREDENTIALS=[PATH]
+```
+*Where [PATH] is the path to the location of the .json file.*  
+
+
 
