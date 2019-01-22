@@ -44,4 +44,8 @@ Python -m virtualenv [NAME]
 3. Do this for each audio file needed to transcribe and then upload them to your Bucket on the Google Cloud Storage. Depending on the size of the files this can take a long time. Once they are fully uploaded, they are ready to be transcribed.  
 
 ## Python Script  
-1. Copy the Python script from this repository and paste it into a Python S
+1. Copy the Python script from this repository and paste it into a Python script on your computer. Save that file in a memorable location under the name Transcript.py.  
+2. For each audio file you wish to transcribe you will have to change two portions of this Python script.  
+```python
+sys.stdout = open('
+
